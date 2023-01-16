@@ -1,37 +1,171 @@
-html {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300; }
+@media (min-width: 1200px) {
+  #left {
+    flex: 4 !important; }
+  #right {
+    flex: 6 !important; } }
 
-body {
+@media (max-width: 768px) {
+  body {
+    overflow: auto !important; }
+  #right {
+    display: none !important; }
+  #left {
+    justify-content: start !important;
+    margin-top: 2vh !important; }
+  #signin .logo {
+    margin-bottom: 2vh !important; }
+  #signin .form-group input {
+    margin-bottom: 0.7rem !important; }
+  #main-footer {
+    padding-top: 1rem !important; } }
+
+.primary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 500;
+  background: #f96816;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.5s; }
+  .primary-btn:hover {
+    background: #ff7b39; }
+
+.secondary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 1px solid #f4f4f4;
+  border-radius: 2px;
+  font-weight: 500;
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition-property: border-color color;
+  transition-duration: 0.5s; }
+  .secondary-btn:hover {
+    border-color: #ff7b39;
+    color: #ff7b39; }
+
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   background: #181818;
-  color: white; }
+  color: #fff;
+  overflow: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300; }
 
 #wrapper {
-  display: flex;
-  height: 100vh; }
-
-#left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  #left .logo {
+  display: flex; }
+  #wrapper #left {
+    flex: 1;
     display: flex;
-    margin-bottom: 3rem; }
-    #left .logo img {
-      height: 30px;
-      margin-right: 2px; }
-    #left .logo span {
-      height: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center; }
+    #wrapper #left #signin {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-transform: uppercase;
-      letter-spacing: 3px; }
-
-#right {
-  flex: 1; }
+      width: 80%;
+      padding-bottom: 1rem; }
+      #wrapper #left #signin .secondary-btn,
+      #wrapper #left #signin .or,
+      #wrapper #left #signin .links {
+        width: 60%; }
+      #wrapper #left #signin .logo {
+        display: flex;
+        margin-bottom: 3rem; }
+        #wrapper #left #signin .logo img {
+          height: 30px;
+          margin-right: 2px; }
+        #wrapper #left #signin .logo span {
+          padding: 5px;
+          text-transform: uppercase;
+          letter-spacing: 3px; }
+      #wrapper #left #signin form {
+        width: 80%;
+        padding-bottom: 3rem; }
+        #wrapper #left #signin form .form-group label {
+          font-size: 0.9rem;
+          line-height: 2rem;
+          font-weight: 500; }
+        #wrapper #left #signin form .form-group input {
+          margin-bottom: 1.3rem;
+          width: 100%;
+          border-radius: 2px;
+          background-color: transparent;
+          border: 1px solid #555;
+          color: #ccc;
+          padding: 0.5rem 1rem;
+          line-height: 1.3rem; }
+        #wrapper #left #signin form button {
+          width: 100%; }
+      #wrapper #left #signin .links a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 0.9rem; }
+      #wrapper #left #signin .or {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1.2rem;
+        align-items: center; }
+        #wrapper #left #signin .or .bar {
+          flex: auto;
+          border: none;
+          height: 1px;
+          background: #aaa; }
+        #wrapper #left #signin .or span {
+          color: #ccc;
+          padding: 0 0.8rem; }
+    #wrapper #left #main-footer {
+      color: #ccc;
+      text-align: center;
+      font-size: 0.8rem;
+      max-width: 80%;
+      padding-top: 5rem; }
+      #wrapper #left #main-footer a {
+        color: #f96816;
+        text-decoration: underline; }
+  #wrapper #right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/img/showcase.jpg) no-repeat center center/cover;
+    height: 100vh; }
+    #wrapper #right #showcase {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
+      #wrapper #right #showcase .showcase-text {
+        font-size: 3rem;
+        width: 100%;
+        color: #fff;
+        margin-bottom: 1.5rem; }
+      #wrapper #right #showcase .secondary-btn {
+        width: 60%;
+        margin: auto; }
